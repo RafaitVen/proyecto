@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: #fff;
+    font-family: sans-serif;
+}
+.contenedor{
+    display: grid;
+    gap: 2px;
+    grid-template-rows:70vh 55vh repeat(3, 40vh);
+    grid-template-columns: repeat(4,1fr) 0.3rem;
+    grid-template-areas:
+    "header header header header menu" 
+    "contenido contenido contenido aside aside" 
+    "cards cards cards aside aside" 
+    "cards cards cards aside aside"
+    "footer footer footer footer footer"  
+;
+}
+
+.header{
+    grid-area: header;
+    width: 100%;
+    height: auto;
+    
+}
+
+.header{
+    background: linear-gradient(rgba(5,7, 12, 0.50),rgba(5,7,12,0.50)), url(/css/img/pexels-roberto-nickson-2775196.jpg) no-repeat center fixed;
+    background-size: cover;
+    border-bottom: 3px solid black;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header h2{
+    font-size: 4rem;
+    color: whitesmoke;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+.nav-menu a{
+    font-size: larger;
+    margin: 2rem;
+    padding: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu a:hover{
+    border-radius: 0.5rem;
+    background-color: rgb(99, 124, 237);
+    color:#000;
+    }
+
+
+/*Menu principa*/
+
+.menu{
+    grid-area: menu;
+    
+}
+
+.contenido{
+    grid-area: contenido;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: justify;
+    
+}
+
+.contenido >p{
+    font-size: 1.3rem;
+    font-style: italic;
+    padding: 1rem;
+    color: #000;
+    
+}
+
+/*Contenido later*/
+
+.aside{
+    grid-area: aside;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.aside{
+    background-color: #f1f4f4;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.titulo-2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+.aside:hover{
+    transition: 0.8deg;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 15px 3px, rgba(0, 0, 0, 0.5) 0px 4px 6px 2px;
+}
+
+.aside img{
+    border-radius: 20px;
+    width: 18rem;
+    height: 13rem;
+    transition: 0.6s;
+    margin: 0.5rem;
+}
+
+.aside img:hover{
+    transform: scale(0.9);
+    box-shadow:1px 2px 1px 1px black;
+}
+
+/*Estilos de Tarjeta*/
+
+.cards{
+    grid-area: cards;
+    display: flex;
+    flex-flow:row  ;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+
+.card{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border-radius: 1rem; 
+    padding: 1rem;
+}
+
+.card{
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+.card:hover{
+box-shadow: #11111a1a 0px 4px 16px, #11111a1a 0px 8px 24px, #11111a1a 0px 16px 56px;
+}
+
+.img-destino{
+    width: 15rem;
+    height: 14rem;
+    border-radius: 1rem;
+    transform: scale(0.9);
+    transition: 2deg;
+}
+
+.img-destino:hover{
+    transform: scale(1);
+}
+
+.titulo{
+    font-style: italic;
+    font-weight: 800;
+}
+
+.precio{
+    font-style: italic;
+    font-weight: 500;
+}
+
+.valor{
+    font-style: italic;
+    font-weight: 600;
+}
+
+.card a{
+    color: #000;
+
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+}
+
+iframe{
+    width: 300px;
+    height: 200px;
+    border: #000 solid 2px;
+}
+
+.iconos{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    color: #fff;
+}
+
+.formulario{
+    width: 650px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    border: #fff solid 2px;
+}
+
+.formulario input{
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    border: none;
+}
+
+
+.formulario h3 {
+    color: #fff;
+    margin: 0.4rem;
+    text-decoration: dotted;
+    text-align: center;
+}
+
+.formulario textarea{
+    border-radius: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.formulario button{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: cornsilk;
+    
+}
+
